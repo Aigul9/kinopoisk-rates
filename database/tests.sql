@@ -65,3 +65,11 @@ select count(distinct film_id) from staff;
 select * from films f left join staff s on f.film_id = s.film_id
 where s.film_id is null;
 --ok
+
+--B02
+select distinct profession_key from staff;
+--ok
+
+--B03
+select * from staff where name_en = '';
+--ok
