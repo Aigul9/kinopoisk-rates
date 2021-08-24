@@ -1,5 +1,5 @@
 from decouple import config
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, ForeignKey
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, Float
@@ -119,6 +119,26 @@ class Film(Base):
         self.reviews_count = reviews_count
         self.rating_good_review = rating_good_review
         self.rating_good_review_vote_count = rating_good_review_vote_count
+
+
+class Staff(Base):
+    __tablename__ = 'staff'
+    staff_id = Column(Integer, primary_key=True)
+    film_id = Column(Integer, ForeignKey('films.film_id'), primary_key=True)
+    name_ru = Column(String)
+    name_en = Column(String)
+    description = Column(String)
+    profession_text = Column(String)
+    profession_key = Column(String, primary_key=True)
+
+    def __init__(self, staff_id, film_id, name_ru, name_en, description, profession_text, profession_key):
+        self.staff_id = staff_id
+        self.film_id = film_id
+        self.name_ru = name_ru
+        self.name_en = name_en
+        self.description = description
+        self.profession_text = profession_text
+        self.profession_key = profession_key
 
 
 Base.metadata.create_all(db)

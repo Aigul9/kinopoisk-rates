@@ -1,4 +1,4 @@
-from database.db_connect import session, Film
+from database.db_connect import session, Film, Staff
 from kp import logger
 
 
@@ -60,4 +60,18 @@ def load_film(f, orig_f):
         f['review']['ratingGoodReviewVoteCount'],
     )
     session.add(film)
-    return film
+
+
+def load_staff(s, film_id):
+    print(s)
+    staff = Staff(
+        s['staffId'],
+        film_id,
+        s['nameRu'],
+        s['nameEn'],
+        s['description'],
+        s['professionText'],
+        s['professionKey']
+    )
+    session.add(staff)
+    logger.info(f'{film_id}, {s["nameRu"]}')

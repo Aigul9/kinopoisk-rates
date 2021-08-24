@@ -2,6 +2,7 @@
 select count(*) from films;
 select * from films order by film_id;
 --490
+--ok
 
 --A01
 select distinct name_ru from films order by 1;
@@ -21,6 +22,7 @@ select * from films where length(cast(year as text)) != 4;
 
 --A04
 select * from films where film_length not like '%:%';
+--ok
 
 --A05
 select distinct my_vote from films order by 1;
@@ -51,4 +53,15 @@ select * from films where rating_imdb = 0;
 
 --A09
 select * from films where left(budget, 1) != '$';
+--ok
+
+--B00
+select count(*) from staff;
+--50021
+select count(distinct film_id) from staff;
+--440
+
+--B01
+select * from films f left join staff s on f.film_id = s.film_id
+where s.film_id is null;
 --ok

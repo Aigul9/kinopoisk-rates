@@ -79,17 +79,26 @@ def load_data(path):
 def get_movie_attr(href):
     """Возращает тип: фильм или сериал - и его id."""
     href = href.split('/')
-    return href[1], href[2]
+    return href[1], int(href[2])
 
 
-def extract_data_api(movie_id, api_key):
+def extract_data_api(film_id, api_key):
     """Получает дополнительные данные по фильму из api."""
-    url = f'https://kinopoiskapiunofficial.tech/api/v2.1/films/{movie_id}?' \
+    url = f'https://kinopoiskapiunofficial.tech/api/v2.1/films/{film_id}?' \
           f'append_to_response=BUDGET&' \
           f'append_to_response=RATING&' \
           f'append_to_response=REVIEW&'
     headers = {'content-type': 'application/json', 'X-API-KEY': api_key}
     r = requests.get(url, headers=headers)
+    return json.loads(r.content.decode('utf-8'))
+
+
+def extract_staff_api(film_id, api_key):
+    """Получает дополнительные данные по участнику фильма из api."""
+    url = f'https://kinopoiskapiunofficial.tech/api/v1/staff?filmId={film_id}'
+    headers = {'content-type': 'application/json', 'X-API-KEY': api_key}
+    r = requests.get(url, headers=headers)
+    print(r, film_id)
     return json.loads(r.content.decode('utf-8'))
 
 
