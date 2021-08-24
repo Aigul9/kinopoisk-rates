@@ -3,10 +3,11 @@
 
 ## Рекомендации по настройке
 1. Загрузить и установить [Python 3.9](https://www.python.org/)
-2. Клонировать репозиторий
-3. Установить зависимости: ```pip install -r requirements.txt```
+2. Загрузить и установить [Docker](https://www.docker.com/)
+3. Клонировать репозиторий ```git clone https://github.com/Aigul9/kinopoisk-rates.git```.
+4. Установить зависимости: ```pip install -r requirements.txt```.
+5. Проинициализировать переменные окружения в файле ```.env_template``` и переименовать его в ```.env```.
 
-## Настройка базы данных
-1. Загрузить и установить [Docker](https://www.docker.com/)
-2. Проинициализировать переменные окружения в файле .env_template и переименовать его в .env.
-3. Запустить контейнер: ```docker-compose up```
+## Запуск
+1. Запустить postgres в контейнере: ```docker-compose up```.
+2. Запустить скрипт ```main.py```.
