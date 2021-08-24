@@ -4,8 +4,6 @@ from decouple import config
 
 
 if __name__ == '__main__':
-    print(config('COUNT'))
-    exit()
     pages = kp.get_pages(config('COUNT'))
     for page_no in range(pages):
         data = kp.extract_data(config('USER_ID'), page_no + 1)
