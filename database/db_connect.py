@@ -1,16 +1,18 @@
+from decouple import config
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer, Float
 from sqlalchemy.types import ARRAY
 
-db_name = 'kinopoisk_db'
-db_user = 'postgres'
-db_pass = 'postgres'
-db_host = 'localhost'
-db_port = '5432'
 
-db_string = 'postgresql://{}:{}@{}:{}/{}'.format(db_user, db_pass, db_host, db_port, db_name)
+db_string = 'postgresql://{}:{}@{}:{}/{}'.format(
+    config('POSTGRES_USER'),
+    config('POSTGRES_PASSWORD'),
+    config('POSTGRES_HOST'),
+    config('POSTGRES_PORT'),
+    config('POSTGRES_DB')
+)
 db = create_engine(db_string)
 Session = sessionmaker(bind=db)
 Base = declarative_base()
