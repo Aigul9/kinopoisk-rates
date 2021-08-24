@@ -7,8 +7,8 @@ def load_film(f, orig_f):
     exist = session.query(Film).filter(Film.film_id == film_id).first() is not None
     if exist:
         logger.error(f['data']['filmId'])
-        return
-    logger.info(f['data']['filmId'])
+        return False
+    logger.info(film_id)
     if len(orig_f) < 9:
         my_vote = None
     else:
@@ -60,10 +60,17 @@ def load_film(f, orig_f):
         f['review']['ratingGoodReviewVoteCount'],
     )
     session.add(film)
+    return True
 
 
 def load_staff(s, film_id):
-    print(s)
+    exist = session.query(Staff)\
+                .filter(Staff.film_id == film_id)\
+                .filter(Staff.staff_id == s['staffId'])\
+                .filter(Staff.profession_key == s['professionKey']).first() is not None
+    if exist:
+        logger.error(film_id)
+        return
     staff = Staff(
         s['staffId'],
         film_id,

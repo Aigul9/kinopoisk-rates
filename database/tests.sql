@@ -57,9 +57,9 @@ select * from films where left(budget, 1) != '$';
 
 --B00
 select count(*) from staff;
---50021
+--57295
 select count(distinct film_id) from staff;
---440
+--490
 
 --B01
 select * from films f left join staff s on f.film_id = s.film_id

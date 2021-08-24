@@ -1,0 +1,31 @@
+name_en	average_votes	movies	my_votes	movie_ids
+Taylor Hackford	10	{The Devil's Advocate,Ray}	{10,10}	{3797,5319}
+Chris Columbus	10	{Home Alone 2: Lost in New York,Home Alone}	{10,10}	{5928,8124}
+Charles Chaplin	9.5	{The Circus,City Lights}	{9,10}	{2119,414}
+Paul McGuigan	9	{Wicker Park,Lucky Number Slevin}	{9,9}	{23737,86326}
+Peter Weir	9	{Dead Poets Society,The Truman Show}	{9,9}	{4996,4541}
+Pete Docter	9	{Soul,Up,Inside Out}	{8,10,9}	{775273,325381,645118}
+Giuseppe Tornatore	9	{Una pura formalità,La leggenda del pianista sull'oceano}	{8,10}	{11617,8335}
+Alfred Hitchcock	8.667	{Dial M for Murder,Vertigo,Lifeboat,Psycho,Rebecca,North by Northwest}	{10,8,7,9,9,9}	{9028,352,9123,344,426,343}
+Clint Eastwood	8.5	{Changeling,Gran Torino}	{10,7}	{279880,408410}
+Frank Capra	8.5	{It Happened One Night,It's a Wonderful Life}	{8,9}	{437,348}
+Steven Spielberg	8.333	{Schindler's List,Catch Me If You Can,The Terminal}	{9,8,8}	{329,324,6877}
+Roman Polanski	8.333	{The Pianist,Carnage,Chinatown}	{9,7,9}	{355,557837,365}
+Christopher Nolan	8.167	{Tenet,Interstellar,Memento,The Dark Knight,The Prestige,Inception}	{6,8,9,9,9,8}	{1236063,258687,335,111543,195334,447301}
+Brad Anderson	8	{Fractured,The Machinist}	{6,10}	{1137716,5206}
+David Fincher	7.714	{Zodiac,The Social Network,The Game,The Curious Case of Benjamin Button,Se7en,Gone Girl,Fight Club}	{7,7,10,6,9,7,8}	{102838,427198,12198,81555,377,692861,361}
+Billy Wilder	7.5	{Sunset Blvd.,Witness for the Prosecution}	{5,10}	{353,489}
+Tim Burton	7.333	{Sleepy Hollow,Edward Scissorhands,Charlie and the Chocolate Factory}	{7,8,7}	{5622,8421,38905}
+Quentin Tarantino	7.125	{Reservoir Dogs,Inglourious Basterds,Pulp Fiction,Once Upon a Time... in Hollywood,Kill Bill: Vol. 1,Kill Bill: Vol. 2,Four Rooms,Django Unchained}	{5,10,4,7,9,9,4,9}	{394,9691,342,1047883,2717,47015,4250,586397}
+Joel Schumacher	7	{A Time to Kill,The Number 23}	{7,7}	{1965,178579}
+Martin Brest	7	{Scent of a Woman,Meet Joe Black}	{7,7}	{4871,5059}
+Ingmar Bergman	7	{Det sjunde inseglet,Höstsonaten}	{6,8}	{425,924}
+Hayao Miyazaki	7	{Tonari no Totoro,Hauru no ugoku shiro}	{6,8}	{8221,49684}
+Guy Ritchie	7	{Sherlock Holmes,Lock, Stock and Two Smoking Barrels}	{5,9}	{420923,522}
+Will Gluck	6.5	{Easy A,Friends with Benefits}	{6,7}	{463046,505811}
+Darren Aronofsky	6.5	{Requiem for a Dream,Black Swan}	{5,8}	{367,278273}
+Martin Scorsese	6	{Shutter Island,The Wolf of Wall Street,Goodfellas,The Departed}	{10,4,5,5}	{397667,462682,350,81314}
+Damien Chazelle	6	{La La Land,Whiplash}	{8,4}	{841081,725190}
+David Lynch	6	{Mulholland Dr.,Lost Highway,Inland Empire}	{6,6,6}	{466,4144,104987}
+Stanley Kubrick	5.5	{A Clockwork Orange,Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb}	{4,7}	{391,334}
+Martin McDonagh	5	{Seven Psychopaths,Three Billboards Outside Ebbing, Missouri}	{4,6}	{586584,944098}

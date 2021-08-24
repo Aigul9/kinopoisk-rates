@@ -43,3 +43,6 @@ order by 2 desc, 4 desc;
 select * from staff s join films f
 on s.film_id = f.film_id
 where s.film_id = 428930 and profession_key = 'DIRECTOR';
+
+select * from films f join staff s on f.film_id = s.film_id
+where profession_key = 'PRODUCER_USSR';

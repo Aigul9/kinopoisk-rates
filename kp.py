@@ -29,6 +29,7 @@ def extract_data(user_id, page_no):
         exit()
     for item in items:
         num = item.find('div', {'class': 'num'}).text
+        logger.info(num)
         href = item.find('a', href=True)['href']
         name_rus = item.find('div', {'class': 'nameRus'}).text
         name_eng = item.find('div', {'class': 'nameEng'}).text
@@ -98,7 +99,6 @@ def extract_staff_api(film_id, api_key):
     url = f'https://kinopoiskapiunofficial.tech/api/v1/staff?filmId={film_id}'
     headers = {'content-type': 'application/json', 'X-API-KEY': api_key}
     r = requests.get(url, headers=headers)
-    print(r, film_id)
     return json.loads(r.content.decode('utf-8'))
 
 
@@ -112,7 +112,6 @@ def load_games(path):
     files = files_in_dir(path)
     data = []
     for f in files:
-        logger.info(f[:-4])
         data.extend(load_data(f'{path}{f[:-4]}'))
     return data
 
