@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13-alpine
+    restart: always
+    volumes:
+      - kp:/var/lib/docker/volumes/kp/_data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=kinopoisk_db
+    ports:
+      - "5432:5432"
+
+volumes:
+  kp:
