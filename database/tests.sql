@@ -73,3 +73,14 @@ select distinct profession_key from staff;
 --B03
 select * from staff where name_en = '';
 --ok
+
+--C01
+select * from films;
+
+SELECT column_name FROM information_schema.columns
+WHERE table_schema = 'public'
+and table_name   = 'films';
+
+update films set rating_film_critics = null where rating_film_critics = 'null';
+update films set rating_await = null where rating_await = 'null';
+update films set rating_rf_critics = null where rating_rf_critics = 'null';
